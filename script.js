@@ -85,6 +85,23 @@ class Calculator {
       }
     }
 
+    if (isNaN(prev) || isNaN(current)) return
+    switch (this.operation) {
+      case '+':
+        computation = prev + current
+        break
+      case '-':
+        computation = prev - current
+        break
+      case '*':
+        computation = prev * current
+        break
+      case '÷':
+        computation = prev / current
+        break
+      default:
+        return
+    }
     this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
